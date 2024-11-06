@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Login Form -->
+        <div id="login-form">
+            <h2>Login</h2>
+            <form id="loginForm" action="/login" method="post">
+                <input type="email" id="login-email" name="email" placeholder="Enter your email" required>
+                <input type="password" id="login-password" name="password" placeholder="Enter your password" required>
+                <input type="submit" value="Login">
+            </form>
+            <p>Don't have an account? <a href="#" id="show-register">Register</a></p>
+        </div>
+
+        <!-- Registration Form -->
+        <div id="registration-form" class="hidden">
+            <h2>Signup</h2>
+            <form id="registerForm" action="/register" method="post">
+                <input type="email" id="register-email" name="email" placeholder="Enter your email" required>
+                <input type="password" id="register-password" name="password" placeholder="Create your password" required>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+                <input type="submit" id="btn_reg" value="Register">
+            </form>
+            <p>Already have an account? <a href="#" id="back-to-login">Login</a></p>
+        </div>
+        
+        <!-- Login Success Message -->
+        <div id="login-success" class="hidden">
+            <h2>Login Success</h2>
+            <p>Welcome! You have successfully logged in.</p>
+        </div>  
+    </div>
+    
+    <script type="module" src="firebase.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+/* General button styling */
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px; /* Add space between buttons */
+}
+
+/* Hover effect for buttons */
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Notification button style */
+#notificationButton {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 24px; /* Make the bell icon larger */
+    cursor: pointer;
+    margin-left: auto; /* Push the notification button to the far right */
+}
+
+/* Styles for the header */
+.header {
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #7e8e7a;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* Other styling */
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
+
+#map {
+    flex-grow: 1;
+    width: 100%;
+}
+
+#searchBox {
+    padding: 10px;
+    width: 300px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+h1 {
+    margin: 0;
+    margin-right: 20px;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenStreetMap with Search</title>
+    <link rel="stylesheet" href="location.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        body {
+            display: flex;
+        }
+
+        .header {
+            position: relative;
+            width: 100%;
+        }
+
+        #map {
+            flex-grow: 1; /* Allow the map to take available space */
+            height: 500px; /* Set height for the map */
+        }
+
+        /* Notification container styles */
+        #notificationContainer {
+            position: absolute;
+            right: 20px; /* Position it to the right */
+            top: 50px; /* Adjust vertical position */
+            width: 200px;
+            background-color: rgb(11, 11, 11);
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none; /* Initially hidden */
+            z-index: 1000; /* Ensure it stays above other content */
+        }
+
+        .notification {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .notification:last-child {
+            border-bottom: none; /* Remove border for last item */
+        }
+
+        .header h1 {
+            margin: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header with search controls -->
+    <div class="header">
+        <h1>Search for Location&nbsp;&nbsp;</h1>
+        <input type="text" id="searchBox" placeholder="Enter location name...">
+        <button onclick="searchLocation()">Search</button>
+        <button id="homeButton" onclick="goToHome()">Log out</button> <!-- Home button -->
+        <button id="notificationButton" onclick="toggleNotification()">🔔</button>
+        
+        <!-- Notification Container -->
+        <div id="notificationContainer">
+            <h4>&nbsp;&nbspSearch History</h4>
+            <div id="notifications"></div> <!-- Notifications will be appended here -->
+        </div>
+    </div>
+
+    <!-- Map container, taking the full remaining space -->
+    <div id="map"></div>
+
+    <!-- Import Leaflet.js -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <!-- Link to external JavaScript file -->
+    <script src="Location.js"></script>
+    <script>
+        // Function to show or hide the notification container
+        function toggleNotification() {
+            const notificationContainer = document.getElementById('notificationContainer');
+            notificationContainer.style.display = notificationContainer.style.display === 'none' ? 'block' : 'none';
+        }
+
+        // Function to add a notification to the notification container
+        function addNotification(message) {
+            const notificationsDiv = document.getElementById('notifications');
+            const notificationDiv = document.createElement('div');
+            notificationDiv.classList.add('notification');
+            notificationDiv.textContent = message;
+            notificationsDiv.appendChild(notificationDiv);
+        }
+
+        // Function to navigate to the login form
+        function goToHome() {
+            window.location.href = "index.html"; // Change to the path of your login form
+        }
+    </script>
+    
+</body>
+</html>

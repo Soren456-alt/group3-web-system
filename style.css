@@ -1,0 +1,59 @@
+body {
+    background-image: url('168595-space-stars.jpg');
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    height: 100vh; /* Full viewport height */
+    display: flex; /* Use Flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.container {
+    max-width: 400px;
+    background: rgba(1, 1, 91, 0.8); /* Deep navy background with 80% opacity */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* A stronger shadow for a subtle glow effect */
+    color: #f0f8ff; /* Light color for text inside the container */
+}
+
+
+
+
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="submit"] {
+    width: 90%; /* Set width to 90% for centering */
+    padding: 10px;
+    margin: 10px auto; /* Center margin (top/bottom, left/right) */
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    display: block;
+}
+
+input[type="submit"] {
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #4cae4c;
+}
+
+.hidden {
+    display: none;
+}
+
+p {
+    text-align: center;
+}
